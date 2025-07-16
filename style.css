@@ -23,6 +23,8 @@ html,body{
 
 #nav{
     display:flex;
+    align-items: center;
+    justify-content: space-between;
     width:100%;
     padding:30px 50px;
 }
@@ -30,3 +32,64 @@ html,body{
 #nav img{
     width:100px;
 }
+
+#nav #right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#nav a{
+    text-decoration: none;
+    font-weight: 400;
+    color:black;
+    font-size:1vw;
+    letter-spacing: -1px;
+}
+
+#nav i{
+    margin-top: 3px;
+    font-size: 20px;
+}
+
+#home #homemain{
+    width:100%;
+    padding:15vw 9vw;
+}
+
+#homemain h1{
+    font-weight: 600;
+    letter-spacing:10 ;
+    font-size: 1.34vw;
+}
+
+.headings{
+  display: flex;   
+  gap: 70px;
+}
+
+#homemain .headings h1{
+    color: transparent;
+    -webkit-text-stroke: 1px #0f0e0e;
+    font-size: 7vw;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -5px ;
+}
+
+#homelast{
+    padding: 5vw 9vw;
+}
+
+#homelast p{
+    font-size: 1.6vw;
+    font-weight: 400;
+    letter-spacing: -.08vw;
+    line-height: 1.4;
+}
+
+#homelast p::selection{
+    color: #ffff;
+    background-color: #0f0e0e;
+}
+
