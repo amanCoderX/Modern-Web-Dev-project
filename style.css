@@ -3,7 +3,11 @@
     padding:0;
     font-family: "Matter Light" ;
     box-sizing:border-box;
+}
 
+*::selection{
+    color:white;
+    background-color: black;
 }
 
 html,body{
@@ -18,7 +22,7 @@ html,body{
 #home{
     width:100%;
     min-height:100vh;
-    border:2px solid red;
+    
 }
 
 #nav{
@@ -75,6 +79,10 @@ html,body{
     font-weight: 500;
     line-height: 1;
     letter-spacing: -5px ;
+}
+
+#homemain .headings h1:hover{
+    color: black;
 }
 
 #homelast{
@@ -164,17 +172,22 @@ html,body{
 #fright .images{
     width:90%;
     height: 90%;
-    background-color: red;
 }
 
-#btndiv{
+#fright .images img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.btndiv{
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-#btndiv button{
+.btndiv button{
     padding: 1.3vw 2.5vw ;
     border-radius:100px ;
     border:2px solid rgb(233, 225, 225);
@@ -183,4 +196,155 @@ html,body{
     font-weight: 500;
     letter-spacing: -1px;
 }
+
+#dev{
+    width:100%;
+    padding:5vw 15vw;
+
+}
+
+#dev h1{
+    font-size: 3.8vw;
+    font-weight: 400;
+    width: 60%;
+    line-height: 1;
+}
+
+#dev p{
+    font-size: 1.5vw;
+    margin-top: 3vw;
+    letter-spacing: -.5px;
+    width: 60%;
+
+}
+
+#slides{
+    padding: 3vw 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slide{
+    width:30%;
+
+}
+
+.slide .img{
+    width:100%;
+    height: 270px;
+    overflow:hidden ;
+    border-radius:30px;
+    background-color: rgb(248, 252, 6);
+
+}
+
+.slide .img img{
+     width:100%;
+     height: 100%;
+     object-fit: cover;
+}
+
+.slide .tag{
+    width:fit-content;
+    border-radius: 100px;
+    padding:10px 22px;
+    background-color: #f7f7f7;
+    margin:20px 0;
+
+}
+
+.slide h3{
+    font-size: 1.4vw;
+    font-weight: 400;
+    letter-spacing: -.5px;
+}
+
+#cursor {
+    width: 10px;
+    height: 10px;
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 50%;
+    position: fixed;
+    top:0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+#video-reveal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 30px;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+   border: 3px solid white;
+  box-shadow: 0 0 20px rgba(166, 166, 162, 0.956);
+
+}
+
+#video-reveal video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.magnetic {
+  transition: all 0.4s ease; /* smoother animation */
+  display: inline-block;
+  will-change: transform;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+
+.magnetic:hover {
+    transform: scale(1.05);
+  background-color: black;
+  color: white;
+}
+
+#image-scroll-zone {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+}
+
+.image-reveal-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-reveal-wrapper img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  max-width: 100%;
+  max-height: 90vh;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  scale: 1.1;
+  transition: all 0.6s ease;
+  z-index: 1;
+}
+
+.image-reveal-wrapper img.active {
+  opacity: 1;
+  z-index: 2;
+  scale: 1;
+}
+
 
